@@ -1,6 +1,13 @@
 import React from "react";
 import Link from "next/link";
 import styles from "./Navbar.module.scss";
+import {
+  faAnchor,
+  faCoffee,
+  faSearch,
+  faUser,
+} from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 const Navbar = () => {
   return (
     <div className="navbar">
@@ -37,7 +44,11 @@ const Navbar = () => {
             </li>
           </ul>
         </nav>
-        <div className="subscribe-wrapper"></div>
+        <div className="subscribe-wrapper">
+          <FontAwesomeIcon icon={faSearch} />
+          <FontAwesomeIcon icon={faUser} />
+          <button>SUBSCRIBE</button>
+        </div>
       </div>
     </div>
   );
