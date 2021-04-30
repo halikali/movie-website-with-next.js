@@ -20,12 +20,18 @@ a {
 footer {
   background-color: #221f1f;
 }
-
+.container {
+  width: 96%;
+  margin: 0 auto;
+}
+// navbar
 .navbar {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  background-color: #27282a;
+  background-color: #27282a8a;
+  position: fixed;
+  z-index: 99;
   .logo-wrapper {
     height: 90px;
     display: flex;
@@ -68,6 +74,88 @@ footer {
         height: 45px;
         margin: auto;
       }
+    }
+  }
+}
+
+// carousel
+.carousel {
+  position: relative;
+  .carousel-background-img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    overflow-x: hidden;
+    filter: brightness(35%);
+  }
+
+  .carousel-items-wrapper {
+    margin: auto;
+    position: absolute;
+    top: 200px;
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    justify-content: space-evenly;
+    .carousel-text-wrapper {
+      width: 50%;
+      #high-rated-text {
+        font-size: 18px;
+        display: block;
+        width: 130px;
+        line-height: 30px;
+        border-left: 2px solid red;
+        text-align: center;
+        font-weight: bold;
+        word-spacing: 5px;
+        margin-bottom: 2rem;
+      }
+      #movie-name-text {
+        font-size: 32px;
+        font-weight: bold;
+        margin-bottom: 2rem;
+      }
+      #movie-description-text {
+        display: block;
+        width: 600px;
+        line-height: 30px;
+      }
+      .movie-details-wrapper {
+        line-height: 30px;
+        margin-top: 1rem;
+        font-weight: 500;
+        #cast-text {
+        }
+        span {
+          color: red;
+        }
+      }
+    }
+    .carousel-img-wrapper {
+      width: 40%;
+      img {
+        width: 100%;
+        height: 450px;
+      }
+    }
+  }
+}
+
+// Hits
+.popular-movies-wrapper {
+  display: flex;
+  justify-content: space-between;
+  .popular-movies-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .popular-movies {
+    width: 450px;
+    height: 250px;
+    margin-right: 2rem;
+
+    img {
+      width: 400px;
     }
   }
 }

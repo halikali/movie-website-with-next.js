@@ -2,18 +2,18 @@ const initialState = {
   data: [],
 };
 
-const denemeReducer = (state = initialState, action) => {
+const popularMoviesReducer = (state = initialState, action) => {
   switch (action.type) {
-    case "GET_DATA_REQUEST":
+    case "GET_POPULAR_MOVIES_REQUEST":
       return {
         ...state,
       };
-    case "GET_DATA_SUCCESS":
+    case "GET_POPULAR_MOVIES_SUCCESS":
       return {
         ...state,
         data: action.payload,
       };
-    case "GET_DATA_ERROR":
+    case "GET_POPULAR_MOVIES_ERROR":
       return {
         ...state,
         data: action.payload,
@@ -23,4 +23,4 @@ const denemeReducer = (state = initialState, action) => {
   }
 };
 
-export default denemeReducer;
+export default popularMoviesReducer;

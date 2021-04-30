@@ -1,18 +1,22 @@
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import styles from "../styles/Home.module.scss";
+import Carousel from "./Components/Carousel/Carousel";
 import Footer from "./Components/Footer/Footer";
+import Hits from "./Components/Hits/Hits";
 import Navbar from "./Components/Navbar/Navbar";
-import { getData } from "./store/actions/actions";
+import { getPopularMovies } from "./store/actions/actions";
 
 function Home() {
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(getData());
+    dispatch(getPopularMovies());
   }, []);
   return (
     <div className={styles.container}>
       <Navbar />
+      <Carousel />
+      <Hits />
     </div>
   );
 }
