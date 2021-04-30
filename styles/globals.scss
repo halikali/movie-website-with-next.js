@@ -142,20 +142,34 @@ footer {
 }
 
 // Hits
+.container > p {
+  margin: 3rem 0;
+  font-weight: bold;
+  font-size: 1.4rem;
+}
 .popular-movies-wrapper {
   display: flex;
   justify-content: space-between;
+  height: 400px;
+
   .popular-movies-container {
     display: flex;
     flex-direction: column;
   }
   .popular-movies {
-    width: 450px;
+    width: 400px;
     height: 250px;
     margin-right: 2rem;
-
+    cursor: grab;
+    overflow: hidden;
     img {
       width: 400px;
+      height: 250px;
+      transition: all 0.8s ease-in-out;
+      &:hover {
+        transform: scale(1.3);
+        transition: all 0.8s ease-in-out;
+      }
     }
   }
 }

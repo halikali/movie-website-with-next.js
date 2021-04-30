@@ -13,3 +13,18 @@ export const getPopularMovies = () => {
       );
   };
 };
+
+export const getPopularTvSeries = () => {
+  return (dispatch) => {
+    fetch(
+      `https://api.themoviedb.org/3/trending/tv/week?api_key=${process.env.NEXT_PUBLIC_GAID_API_KEY}&language=tr-TR`
+    )
+      .then((response) => response.json())
+      .then((data) =>
+        dispatch({ type: "GET_POPULAR_TV_SERIES_SUCCESS", payload: data })
+      )
+      .catch((error) =>
+        dispatch({ type: "GET_POPULAR_TV_SERIES_ERROR", payload: error })
+      );
+  };
+};

@@ -1,6 +1,7 @@
 import { Provider } from "react-redux";
 import "../styles/reset.scss";
 import "../styles/globals.scss";
+import "swiper/swiper.scss";
 import store from "./store/store";
 
 function MyApp({ Component, pageProps }) {
