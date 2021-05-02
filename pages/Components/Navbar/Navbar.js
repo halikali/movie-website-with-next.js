@@ -47,7 +47,7 @@ const Navbar = () => {
         <div className="subscribe-wrapper">
           <FontAwesomeIcon icon={faSearch} />
           <FontAwesomeIcon icon={faUser} />
-          <button>SUBSCRIBE</button>
+          <button className="button">SUBSCRIBE</button>
         </div>
       </div>
     </div>

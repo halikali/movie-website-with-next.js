@@ -66,18 +66,17 @@ footer {
       svg {
         margin: auto;
       }
-      button {
-        background-color: red;
-        border: none;
-        outline: none;
-        width: 125px;
-        height: 45px;
-        margin: auto;
-      }
     }
   }
 }
-
+.button {
+  background-color: red;
+  border: none;
+  outline: none;
+  width: 125px;
+  height: 45px;
+  margin: auto;
+}
 // carousel
 .carousel {
   position: relative;
@@ -124,8 +123,6 @@ footer {
         line-height: 30px;
         margin-top: 1rem;
         font-weight: 500;
-        #cast-text {
-        }
         span {
           color: red;
         }
@@ -172,4 +169,77 @@ footer {
       }
     }
   }
+}
+
+// vertical slider
+.upcoming-movies-background-section {
+  width: 100%;
+  height: 700px;
+  border-left: 4px solid red;
+  position: relative;
+  .upcoming-movies-background-section-text-wrapper {
+    position: absolute;
+    font-weight: bold;
+    width: 700px;
+    height: 500px;
+    top: 200px;
+    line-height: 1.4rem;
+    letter-spacing: 1px;
+    h3 {
+      font-size: 2.4rem;
+      display: block;
+      height: 100px;
+
+      text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+        1px 1px 0 #000;
+    }
+    p {
+      font-size: 1.6rem;
+      margin-bottom: 1.5rem;
+      display: block;
+      height: 200px;
+      text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+        1px 1px 0 #000;
+    }
+    .button {
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+  }
+  .upcoming-movies-backround-img {
+    position: absolute;
+    height: 700px;
+    width: 100%;
+    z-index: 0;
+  }
+
+  .vertical-swiper {
+    height: 600px;
+    position: absolute;
+    right: 0;
+  }
+  .vertical-slide {
+    .vertical-slide-img-wrapper {
+      width: 400px;
+      height: 200px;
+      img {
+        width: 100%;
+        height: 100%;
+        cursor: grab;
+      }
+    }
+  }
+}
+
+//upcoming desc part
+.active-upcoming-desc {
+  display: none;
+}
+// swiper styling
+.swiper-pagination-bullet {
+  border: 4px solid white;
+  opacity: 1;
+}
+.swiper-pagination-bullet-active {
+  border: 4px solid red;
 }
